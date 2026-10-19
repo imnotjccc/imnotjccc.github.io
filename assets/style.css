@@ -11,6 +11,7 @@
   --border: #e3e6ec;
   --rule: #cfd5de;
   --heading: #111827;
+  --highlight: #b4232c;
   --accent: #1f4e79;
   --accent-hover: #163a5c;
   --tag-bg: #eef3f8;
@@ -32,6 +33,7 @@
     --border: #2a303b;
     --rule: #46505f;
     --heading: #f5f7fa;
+    --highlight: #ff8a8a;
     --accent: #7fb2e5;
     --accent-hover: #a6caf0;
     --tag-bg: #1e2a38;
@@ -49,6 +51,7 @@
   --border: #2a303b;
   --rule: #46505f;
   --heading: #f5f7fa;
+  --highlight: #ff8a8a;
   --accent: #7fb2e5;
   --accent-hover: #a6caf0;
   --tag-bg: #1e2a38;
@@ -309,6 +312,31 @@ section h2::before {
 }
 .entry-links a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 .entry-links svg { width: 15px; height: 15px; fill: currentColor; }
+.entry-links svg.stroke { fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Publications */
+.pub-list { margin: 0; }
+.pub {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 22px;
+  align-items: start;
+  padding: 4px 0 22px;
+}
+.pub + .pub { border-top: 1px dashed var(--border); padding-top: 20px; }
+.pub.no-thumb { grid-template-columns: 1fr; }
+.pub-thumb img, .pub-thumb video {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+.pub-title { font-size: 1.02rem; font-weight: 600; line-height: 1.4; margin: 0 0 4px; }
+.pub-authors { margin: 0 0 2px; color: var(--muted); font-size: 0.93rem; }
+.pub-authors .me { color: var(--text); font-weight: 600; }
+.pub-venue { margin: 0; color: var(--muted); font-size: 0.93rem; font-style: italic; }
+.pub-highlight { font-style: normal; font-weight: 600; color: var(--highlight); margin-left: 4px; }
+.pub-note { color: var(--faint); font-size: 0.85rem; margin: 4px 0 0; }
 
 details.coursework { margin-top: 4px; font-size: 0.93rem; }
 details.coursework summary { cursor: pointer; color: var(--accent); font-weight: 500; }
@@ -367,6 +395,7 @@ details.coursework p { color: var(--muted); margin-top: 8px; }
   .plain li { flex-direction: column; gap: 0; }
   .skills { grid-template-columns: 1fr; gap: 2px; }
   .skills dd { margin-bottom: 10px; }
+  .pub { grid-template-columns: 1fr; gap: 12px; }
 }
 
 @media print {
