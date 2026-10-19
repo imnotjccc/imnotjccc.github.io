@@ -9,6 +9,8 @@
   --muted: #5b6475;
   --faint: #8a93a3;
   --border: #e3e6ec;
+  --rule: #cfd5de;
+  --heading: #111827;
   --accent: #1f4e79;
   --accent-hover: #163a5c;
   --tag-bg: #eef3f8;
@@ -28,6 +30,8 @@
     --muted: #a3abb9;
     --faint: #7c8596;
     --border: #2a303b;
+    --rule: #46505f;
+    --heading: #f5f7fa;
     --accent: #7fb2e5;
     --accent-hover: #a6caf0;
     --tag-bg: #1e2a38;
@@ -43,6 +47,8 @@
   --muted: #a3abb9;
   --faint: #7c8596;
   --border: #2a303b;
+  --rule: #46505f;
+  --heading: #f5f7fa;
   --accent: #7fb2e5;
   --accent-hover: #a6caf0;
   --tag-bg: #1e2a38;
@@ -147,7 +153,7 @@ strong { font-weight: 600; }
 .avatar-wrap { position: relative; }
 .avatar {
   width: 200px;
-  height: 300px;
+  height: 250px;
   border-radius: 14px;
   object-fit: cover;
   display: block;
@@ -226,14 +232,26 @@ strong { font-weight: 600; }
 }
 
 /* ---------- Sections ---------- */
-section { padding: 28px 0 8px; }
+section { padding: 48px 0 8px; }
 section h2 {
   font-family: var(--serif);
   font-weight: 600;
-  font-size: 1.55rem;
-  margin: 0 0 18px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--border);
+  font-size: 1.6rem;
+  color: var(--heading);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 22px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--rule);
+}
+section h2::before {
+  content: "";
+  flex: none;
+  width: 5px;
+  height: 1.05em;
+  border-radius: 3px;
+  background: var(--accent);
 }
 
 .date {
@@ -335,7 +353,8 @@ details.coursework p { color: var(--muted); margin-top: 8px; }
     padding-top: 32px;
     text-align: left;
   }
-  .avatar, .avatar-fallback { width: 160px; height: 240px; }
+  .avatar, .avatar-fallback { width: 160px; height: 200px; }
+  section { padding-top: 36px; }
   .avatar-fallback { font-size: 3rem; }
   .profile h1 { font-size: 2rem; }
   .entry-head { flex-direction: column; gap: 0; }
