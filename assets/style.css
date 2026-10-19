@@ -316,16 +316,16 @@ section h2::before {
 
 /* Publications */
 .pub-list { margin: 0; }
-.pub {
+.pub, .proj {
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: 22px;
   align-items: start;
   padding: 4px 0 22px;
 }
-.pub + .pub { border-top: 1px dashed var(--border); padding-top: 20px; }
-.pub.no-thumb { grid-template-columns: 1fr; }
-.pub-thumb img, .pub-thumb video {
+.pub + .pub, .proj + .proj { border-top: 1px dashed var(--border); padding-top: 20px; }
+.pub.no-thumb, .proj.no-thumb { grid-template-columns: 1fr; }
+.pub-thumb img, .pub-thumb video, .proj-thumb img, .proj-thumb video {
   display: block;
   width: 100%;
   border-radius: 8px;
@@ -337,6 +337,12 @@ section h2::before {
 .pub-venue { margin: 0; color: var(--muted); font-size: 0.93rem; font-style: italic; }
 .pub-highlight { font-style: normal; font-weight: 600; color: var(--highlight); margin-left: 4px; }
 .pub-note { color: var(--faint); font-size: 0.85rem; margin: 4px 0 0; }
+
+/* Open-source projects */
+.section-intro { color: var(--muted); margin: -8px 0 20px; }
+.proj-title { font-size: 1.02rem; font-weight: 600; line-height: 1.4; margin: 0 0 2px; }
+.proj-meta { color: var(--faint); font-size: 0.85rem; margin: 0 0 6px; }
+.proj-desc { margin: 0; }
 
 details.coursework { margin-top: 4px; font-size: 0.93rem; }
 details.coursework summary { cursor: pointer; color: var(--accent); font-weight: 500; }
@@ -395,7 +401,7 @@ details.coursework p { color: var(--muted); margin-top: 8px; }
   .plain li { flex-direction: column; gap: 0; }
   .skills { grid-template-columns: 1fr; gap: 2px; }
   .skills dd { margin-bottom: 10px; }
-  .pub { grid-template-columns: 1fr; gap: 12px; }
+  .pub, .proj { grid-template-columns: 1fr; gap: 12px; }
 }
 
 @media print {
