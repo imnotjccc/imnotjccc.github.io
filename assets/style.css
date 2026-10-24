@@ -148,16 +148,16 @@ strong { font-weight: 600; }
 /* ---------- Profile header ---------- */
 .profile {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 170px 1fr;
   gap: 40px;
   align-items: start;
   padding: 56px 0 24px;
 }
 .avatar-wrap { position: relative; }
 .avatar {
-  width: 200px;
-  height: 250px;
-  border-radius: 14px;
+  width: 170px;
+  height: 170px;
+  border-radius: 16px;
   object-fit: cover;
   display: block;
   border: 1px solid var(--border);
@@ -392,7 +392,7 @@ details.coursework p { color: var(--muted); margin-top: 8px; }
     padding-top: 32px;
     text-align: left;
   }
-  .avatar, .avatar-fallback { width: 160px; height: 200px; }
+  .avatar, .avatar-fallback { width: 140px; height: 140px; }
   section { padding-top: 36px; }
   .avatar-fallback { font-size: 3rem; }
   .profile h1 { font-size: 2rem; }
