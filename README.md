@@ -1,30 +1,9 @@
-# imnotjccc.github.io
+# Jiayi Chen
 
-Personal academic homepage of Jiayi Chen. Pure HTML/CSS, no build step.
+Ph.D. student at the Robotics Research Center (RRC), Nanyang Technological University, advised by Prof. I-Ming Chen. B.A.Sc. in Electrical Engineering from the University of British Columbia.
 
-## Files
-- `index.html` — all page content (edit text here)
-- `assets/style.css` — styles (light/dark theme tokens at the top)
-- `assets/Jiayi_Chen_CV.pdf` — CV linked from the "CV" button
-- `assets/profile.png` — profile photo (shown as a 2:3 rounded portrait). If missing, the page shows a "JC" monogram.
-- `.nojekyll` — tells GitHub Pages to serve files as-is
+Research interests: humanoid robots, teleoperation, and vision-language-action (VLA) models.
 
-## Deploy to GitHub Pages
-1. On GitHub, create a **public** repository named exactly `imnotjccc.github.io`.
-2. Upload everything in this folder (including the hidden `.nojekyll` file) to the `main` branch,
-   or from this folder run:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial homepage"
-   git branch -M main
-   git remote add origin https://github.com/imnotjccc/imnotjccc.github.io.git
-   git push -u origin main
-   ```
-3. Repo → Settings → Pages → Source: "Deploy from a branch", Branch: `main` / `(root)`.
-4. After about a minute the site is live at https://imnotjccc.github.io
+Homepage: [imnotjccc.github.io](https://imnotjccc.github.io)
 
-## Updating
-- New publication / news item: copy an existing `<article class="entry">` or `<li>` block in `index.html`.
-- Update the CV: replace `assets/Jiayi_Chen_CV.pdf` (keep the filename).
-- Update the footer's "Last updated" date.
+© 2026 Jiayi Chen. All rights reserved.
